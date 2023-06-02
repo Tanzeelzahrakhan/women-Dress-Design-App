@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Category_detailsActivity">
+
+    <View
+        android:id="@+id/categoriesView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/stroke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ctgryname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Category Name"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/categoriesView"
+        app:layout_constraintStart_toStartOf="@+id/categoriesView"
+        app:layout_constraintTop_toTopOf="@+id/categoriesView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintTop_toBottomOf="@+id/categoriesView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentTop="true"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="8dp">
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorEnabled="false"
+            app:sliderScrollTimeInSec="1" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageButton
+        android:id="@+id/SolidLeftArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/solid"
+        app:layout_constraintEnd_toStartOf="@+id/solidSaved"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView1" />
+
+
+    <ImageButton
+        android:id="@+id/Arrowimg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/left"
+        app:layout_constraintBottom_toBottomOf="@id/SolidLeftArrow"
+        app:layout_constraintEnd_toEndOf="@id/SolidLeftArrow"
+        app:layout_constraintStart_toStartOf="@id/SolidLeftArrow"
+        app:layout_constraintTop_toTopOf="@+id/SolidLeftArrow" />
+
+
+    <ImageButton
+        android:id="@+id/solidSaved"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/solid"
+        app:layout_constraintEnd_toStartOf="@+id/solidShare"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/SolidLeftArrow"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+    <ImageButton
+        android:id="@+id/savedimg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/bookmarks"
+        app:layout_constraintBottom_toBottomOf="@id/solidSaved"
+        app:layout_constraintEnd_toEndOf="@id/solidSaved"
+        app:layout_constraintStart_toStartOf="@id/solidSaved"
+        app:layout_constraintTop_toTopOf="@+id/solidSaved" />
+
+    <ImageButton
+        android:id="@+id/solidShare"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/solid"
+        app:layout_constraintEnd_toStartOf="@+id/SolidRightArrow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/solidSaved"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+    <ImageButton
+        android:id="@+id/shareImg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@id/solidShare"
+        app:layout_constraintEnd_toEndOf="@id/solidShare"
+        app:layout_constraintStart_toStartOf="@id/solidShare"
+        app:layout_constraintTop_toTopOf="@+id/solidShare" />
+
+    <ImageButton
+        android:id="@+id/SolidRightArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/solid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/solidShare"
+        app:layout_constraintTop_toBottomOf="@id/imageView1" />
+
+    <ImageButton
+        android:id="@+id/rightArrowImg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/right"
+        app:layout_constraintBottom_toBottomOf="@id/SolidRightArrow"
+        app:layout_constraintEnd_toEndOf="@id/SolidRightArrow"
+        app:layout_constraintStart_toStartOf="@id/SolidRightArrow"
+        app:layout_constraintTop_toTopOf="@+id/SolidRightArrow" />
+</androidx.constraintlayout.widget.ConstraintLayout>
